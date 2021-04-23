@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const { STRING } = Sequelize;
-const conn = new Sequelize(process.env.DATABASE_URL || 'postgres://localhost/acme_movie');
+const conn = new Sequelize(process.env.DATABASE_URL || 'postgres://localhost/acme_movie', {logging: false});
 
 const Movie = conn.define('movie', {
   title: STRING
@@ -42,6 +42,11 @@ const syncAndSeed = async()=> {
     Role.create({ character: 'Christoff', movieId: truman.id, actorId: harris.id}),
     Role.create({ character: 'Miranda Presly', movieId: devil.id, actorId: meryl.id})
   ]);
+
+  // return {
+  //   movies: [sully, catchMeIfYouCan, truman, devil],
+  //   actors: [hanks, linney, harris, leo, meryl]
+  // }
 };
 
 module.exports = {
