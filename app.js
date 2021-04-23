@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
   <html>
     <p>Hello</p>
     <body>
-    <h1>The Acme Movie API TEST</h1>
+    <h1>The Acme Movie API</h1>
     </body>
   </html>
   `);
