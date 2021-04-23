@@ -42,11 +42,6 @@ const syncAndSeed = async()=> {
     Role.create({ character: 'Christoff', movieId: truman.id, actorId: harris.id}),
     Role.create({ character: 'Miranda Presly', movieId: devil.id, actorId: meryl.id})
   ]);
-
-  // return {
-  //   movies: [sully, catchMeIfYouCan, truman, devil],
-  //   actors: [hanks, linney, harris, leo, meryl]
-  // }
 };
 
 module.exports = {

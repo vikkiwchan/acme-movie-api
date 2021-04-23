@@ -8,7 +8,6 @@ const PORT = process.env.PORT || 3000;
 app.get('/', (req, res) => {
   res.send(`
   <html>
-    <p>Hello</p>
     <body>
     <h1>The Acme Movie API</h1>
     </body>

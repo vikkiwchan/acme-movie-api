@@ -10,9 +10,10 @@ describe('dummy test', () => {
       expect(1 + 2).to.equal(3);
     });
   });
+
   describe('GET /', () => {
-    beforeEach(() => {
-      syncAndSeed();
+    beforeEach(async function() {
+      await syncAndSeed();
     })
 
     it('show header about the api', async () => {
@@ -29,7 +30,6 @@ describe('dummy test', () => {
 
     it('show all actors on /api/actors route', async () => {
       const response = await app.get('/api/actors');
-      console.log(response);
       expect(response.status).to.equal(200);
       expect(response.body.length).to.equal(5);
     });
